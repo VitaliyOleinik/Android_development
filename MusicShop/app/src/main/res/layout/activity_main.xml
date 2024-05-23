@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name"
+        android:ems="10"
+        android:inputType="text" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/salesImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            app:srcCompat="@drawable/sales" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/salesImageView"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"
+            tools:listitem="@android:layout/test_list_item" />
+
+        <ImageView
+            android:id="@+id/pianoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:layout_below="@+id/spinner"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            app:srcCompat="@drawable/piano" />
+
+        <TextView
+            android:id="@+id/orderPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pianoImageView"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Order Price"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderPriceTextView"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="0 $"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pianoImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:text="Quantity"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/countTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantityTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/quantityTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/quantityTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="100dp"
+            android:text="+" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/minusButton"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:text="ADD TO CART"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</LinearLayout>
