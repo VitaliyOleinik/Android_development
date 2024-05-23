@@ -37,12 +37,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/salesImageView"
             android:layout_marginTop="10dp"
-            android:spinnerMode="dropdown"
             tools:listitem="@android:layout/test_list_item" />
 
         <ImageView
-            android:id="@+id/pianoImageView"
-            android:layout_width="wrap_content"
+            android:id="@+id/goodsImageView"
+            android:layout_width="330dp"
             android:layout_height="190dp"
             android:layout_below="@+id/spinner"
             android:layout_marginLeft="40dp"
@@ -54,7 +53,7 @@
             android:id="@+id/orderPriceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pianoImageView"
+            android:layout_below="@+id/goodsImageView"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:text="Order Price"
@@ -76,7 +75,7 @@
             android:id="@+id/quantityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pianoImageView"
+            android:layout_below="@+id/goodsImageView"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="40dp"
@@ -98,6 +97,7 @@
 
         <Button
             android:id="@+id/minusButton"
+            android:onClick="decreaseQuantity"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_below="@id/quantityTextView"
@@ -108,6 +108,7 @@
 
         <Button
             android:id="@+id/plusButton"
+            android:onClick="increaseQuantity"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_below="@id/quantityTextView"
